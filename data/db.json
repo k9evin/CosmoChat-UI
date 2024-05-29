@@ -1,0 +1,33 @@
+{
+  "sessions": [
+    {
+      "id": "1",
+      "date": "May 29, 2024",
+      "chats": [
+        {
+          "user": "Hello, I'm looking for some career advice.",
+          "ReX": "Hi there! I'd be happy to help. What kind of career advice are you looking for?"
+        },
+        {
+          "user": "How to become a frontend developer?",
+          "ReX": "Andrew, to become a frontend developer, start by learning HTML, CSS, and JavaScript. Practice building websites, work on personal projects, and create an impressive portfolio to showcase your skills. Stay updated on the latest technologies and trends in the industry. Consider enrolling in online courses or bootcamps to deepen your knowledge. Networking with other developers can also open up job opportunities. Finally, apply for internships or junior positions to gain practical experience in the field. Good luck on your journey to becoming a"
+        }
+      ],
+      "isSessionEnded": true
+    },
+    {
+      "id": "2",
+      "date": "May 30, 2024",
+      "chats": [
+        {
+          "ReX": "Hello, I am ReX. 😁, What aspect of your career would you like guidance on?"
+        },
+        {
+          "user": "What should I include in my resume as a software developer?",
+          "ReX": "Make sure to highlight your relevant skills, programming languages, and experience. Include any projects you have worked on, certifications, and education. Also, consider adding any software development tools or technologies you are proficient in. Finally, remember to tailor your resume to each job application to showcase how your experience aligns with the job requirements."
+        }
+      ],
+      "isSessionEnded": false
+    }
+  ]
+}
