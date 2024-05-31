@@ -1,11 +1,11 @@
 import React from 'react';
 import { Grid, Typography } from '@mui/material';
-import ChatStyles from '../../styles/chat';
+import chatStyles from '../../styles/chat';
 
 const RexMessage = ({ rexMessage }) => {
   return (
-    <Grid container {...ChatStyles.rexMessageContainer}>
-      <Typography {...ChatStyles.rexMessageText}>{rexMessage}</Typography>
+    <Grid container {...chatStyles.rexMessageContainer}>
+      <Typography {...chatStyles.rexMessageText}>{rexMessage}</Typography>
     </Grid>
   );
 };

@@ -17,14 +17,20 @@
     },
     {
       "id": "2",
-      "date": "May 30, 2024",
+      "date": "Jun 1, 2024",
       "chats": [
         {
           "ReX": "Hello, I am ReX. 😁, What aspect of your career would you like guidance on?"
-        },
+        }
+      ],
+      "isSessionEnded": true
+    },
+    {
+      "id": "3",
+      "date": "Jun 1, 2024",
+      "chats": [
         {
-          "user": "What should I include in my resume as a software developer?",
-          "ReX": "Make sure to highlight your relevant skills, programming languages, and experience. Include any projects you have worked on, certifications, and education. Also, consider adding any software development tools or technologies you are proficient in. Finally, remember to tailor your resume to each job application to showcase how your experience aligns with the job requirements."
+          "ReX": "Hello, I am ReX. 😁, What aspect of your career would you like guidance on?"
         }
       ],
       "isSessionEnded": false

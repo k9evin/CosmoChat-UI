@@ -2,18 +2,18 @@ import React, { useEffect, useState } from 'react';
 import { Button, Grid } from '@mui/material';
 import Textarea from '@mui/joy/Textarea';
 import Images from '../../constants/images';
-import ChatStyles from '../../styles/chat';
+import chatStyles from '../../styles/chat';
 import RexMessage from '../../components/RexMessage';
 import api from '../../api/sessions';
 import { OpenAI } from 'openai';
 import { useParams } from 'react-router-dom';
 import UserMessage from '../../components/UserMessage';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import NavBar from '../../components/Navigation';
 
 const Chat = () => {
   const { id } = useParams();
   const [userPrompt, setUserPrompt] = useState('');
-  const [reXReply, setreXReply] = useState('');
   const [sessions, setSessions] = useState([]);
   const [thisSession, setThisSession] = useState({});
   const months = [
@@ -136,45 +136,49 @@ const Chat = () => {
   }
 
   return (
-    <Grid container style={{ display: matches ? 'none' : 'block' }}>
-      <Grid style={{ padding: '40px 24px 24px 24px', position: 'sticky' }}>
-        <img src={Images.HomeRex} alt="ReX" style={{ width: '105px' }} />
-      </Grid>
-      <Grid {...ChatStyles.textDisplayBackground}>
-        <Grid {...ChatStyles.parentContainer}>
-          {thisSession?.chats?.length
-            ? thisSession?.chats?.map((chat, i) =>
-                Object.keys(chat).map((key) =>
-                  key === 'ReX' ? (
-                    <RexMessage rexMessage={chat.ReX} key={'rex' + i} />
-                  ) : (
-                    <UserMessage userMessage={chat.user} key={'user' + i} />
+    <>
+      <NavBar sessionId={id} />
+
+      <Grid container style={{ display: matches ? 'none' : 'block' }}>
+        <Grid style={{ padding: '24px', position: 'sticky' }}>
+          <img src={Images.HomeRex} alt="ReX" style={{ width: '105px' }} />
+        </Grid>
+        <Grid {...chatStyles.textDisplayBackground}>
+          <Grid {...chatStyles.parentContainer}>
+            {thisSession?.chats?.length
+              ? thisSession?.chats?.map((chat, i) =>
+                  Object.keys(chat).map((key) =>
+                    key === 'ReX' ? (
+                      <RexMessage rexMessage={chat.ReX} key={'rex' + i} />
+                    ) : (
+                      <UserMessage userMessage={chat.user} key={'user' + i} />
+                    )
                   )
                 )
-              )
-            : null}
-        </Grid>
-        {thisSession && !thisSession.isSessionEnded ? (
-          <Grid container {...ChatStyles.inputContainer}>
-            <Grid item xs={9}>
-              <Textarea
-                placeholder="Type a message to ReX ..."
-                variant="plain"
-                color="plain"
-                size="lg"
-                value={userPrompt}
-                onChange={(e) => setUserPrompt(e.target.value)}
-              />
-            </Grid>
-            <Grid item xs={3}>
-              <Button onClick={handleSubmit} variant="contained">
-                Send
-              </Button>
-            </Grid>
+              : null}
           </Grid>
-        ) : null}
+          {thisSession && !thisSession.isSessionEnded ? (
+            <Grid container {...chatStyles.inputContainer}>
+              <Grid item xs={8}>
+                <Textarea
+                  placeholder="Type a message to ReX ..."
+                  variant="plain"
+                  color="plain"
+                  size="lg"
+                  value={userPrompt}
+                  onChange={(e) => setUserPrompt(e.target.value)}
+                />
+              </Grid>
+              <Grid item xs={4}>
+                <Button onClick={handleSubmit} variant="contained">
+                  Send
+                </Button>
+              </Grid>
+            </Grid>
+          ) : null}
+        </Grid>
       </Grid>
-    </Grid>
+    </>
   );
 };
 
