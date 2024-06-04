@@ -105,7 +105,7 @@ function Home() {
           <Grid item xs={12}>
             <Grid container>
               <Grid item xs={12}>
-                <Typography variant="h5" style={{ margin: '12px 24px' }}>
+                <Typography variant="h5" fontWeight={'700'} style={{ margin: '12px 24px' }}>
                   Active Chats
                 </Typography>
               </Grid>
