@@ -1,39 +1,32 @@
 {
   "sessions": [
     {
-      "id": "1",
-      "date": "May 29, 2024",
+      "id": "8",
+      "date": "Aug 12, 2024",
       "chats": [
         {
-          "user": "Hello, I'm looking for some career advice.",
-          "ReX": "Hi there! I'd be happy to help. What kind of career advice are you looking for?"
+          "ReX": "Hello, I am ReX. 😁, What can I help you?"
         },
         {
-          "user": "How to become a frontend developer?",
-          "ReX": "Andrew, to become a frontend developer, start by learning HTML, CSS, and JavaScript. Practice building websites, work on personal projects, and create an impressive portfolio to showcase your skills. Stay updated on the latest technologies and trends in the industry. Consider enrolling in online courses or bootcamps to deepen your knowledge. Networking with other developers can also open up job opportunities. Finally, apply for internships or junior positions to gain practical experience in the field. Good luck on your journey to becoming a"
+          "user": "Hi ReX, I'm having trouble connecting my new TechCorp smartwatch to my phone. I've tried restarting both devices, but it's still not working. Can you help me troubleshoot this issue?",
+          "ReX": "Hello! I'm sorry to hear that you're having trouble with your smartwatch. Let's try a few steps: \n\n1. Ensure Bluetooth is enabled on both devices.\n2. Forget the device from your phone's Bluetooth settings and re-pair them.\n3. Check if the smartwatch companion app is installed and up to date.\n\nIf this doesn't work, please let me know the specific model of your phone and smartwatch for further assistance."
         }
       ],
       "isSessionEnded": true
     },
     {
-      "id": "2",
-      "date": "Jun 1, 2024",
+      "id": "9",
+      "date": "Aug 12, 2024",
       "chats": [
         {
-          "ReX": "Hello, I am ReX. 😁, What aspect of your career would you like guidance on?"
+          "ReX": "Hello, I am ReX. 😁, What can I help you?"
+        },
+        {
+          "user": "Hi ReX, I'm having trouble connecting my new TechCorp smartwatch to my phone. I've tried restarting both devices, but it's still not working. Can you help me troubleshoot this issue?",
+          "ReX": "Hi there! Let's troubleshoot this together. First, ensure that Bluetooth is enabled on both your phone and the smartwatch. Next, check if the smartwatch is in pairing mode. If it is, locate the device on your phone's Bluetooth settings and try pairing again. If the issue persists, try forgetting the device from your phone's Bluetooth settings and re-pairing. If you continue to experience difficulties, please let me know the specific model of your phone and smartwatch for further assistance"
         }
       ],
       "isSessionEnded": true
-    },
-    {
-      "id": "3",
-      "date": "Jun 1, 2024",
-      "chats": [
-        {
-          "ReX": "Hello, I am ReX. 😁, What aspect of your career would you like guidance on?"
-        }
-      ],
-      "isSessionEnded": false
     }
   ]
 }

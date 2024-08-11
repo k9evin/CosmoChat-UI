@@ -12,10 +12,9 @@ import activityStyles from '../../styles/activity';
 function Home() {
   const [sessions, setSessions] = useState([]);
   const navigate = useNavigate();
-  const matches = useMediaQuery('(min-width:600px)');
+  const matches = useMediaQuery('(min-width:1200px)');
   const [loading, setLoading] = useState(true);
-  const rexIntroduction =
-    'Hello, I am ReX. 😁, What aspect of your career would you like guidance on?';
+  const rexIntroduction = 'Hello, I am ReX. 😁, What can I help you?';
   const months = [
     'Jan',
     'Feb',
@@ -105,7 +104,11 @@ function Home() {
           <Grid item xs={12}>
             <Grid container>
               <Grid item xs={12}>
-                <Typography variant="h5" fontWeight={'700'} style={{ margin: '12px 24px' }}>
+                <Typography
+                  variant="h5"
+                  fontWeight={'700'}
+                  style={{ margin: '12px 24px' }}
+                >
                   Active Chats
                 </Typography>
               </Grid>
@@ -189,7 +192,7 @@ function Home() {
           </Grid>
         </Grid>
       ) : (
-        <Grid container style={{ display: matches ? 'none' : 'block' }}>
+        <Grid container>
           {loading ? (
             <CircularProgress
               sx={{

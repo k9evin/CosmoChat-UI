@@ -32,7 +32,7 @@ const Chat = () => {
   ];
   const API_KEY = process.env.REACT_APP_OPENAI_API_KEY;
   const openai = new OpenAI({ apiKey: API_KEY, dangerouslyAllowBrowser: true });
-  const matches = useMediaQuery('(min-width: 600px)');
+  const matches = useMediaQuery('(min-width: 1200px)');
 
   useEffect(() => {
     const fetchSessions = async () => {
@@ -111,7 +111,7 @@ const Chat = () => {
           {
             role: 'system',
             content:
-              'Your name is ReX. You are a career advice assistant. You give advice to Andrew about his career as reply to his prompt. Limit your response to 100 words. You remember the previous conversations and details given by the user.',
+              'You are ReX, a dedicated customer support agent for HeadStarter. Your role is to assist customers, with product inquiries, troubleshooting, and service-related issues. Provide clear, concise responses limited to 100 words. Maintain a friendly yet professional tone, and utilize your knowledge of previous interactions with the customer to offer personalized support. Prioritize efficiency and accuracy in your responses, aiming to resolve issues quickly while ensuring customer satisfaction. Remember key details from past conversations to provide context-aware assistance.',
           },
           {
             role: 'user',
@@ -139,7 +139,7 @@ const Chat = () => {
     <>
       <NavBar sessionId={id} />
 
-      <Grid container style={{ display: matches ? 'none' : 'block' }}>
+      <Grid container>
         <Grid style={{ padding: '24px', position: 'sticky' }}>
           <img src={Images.HomeRex} alt="ReX" style={{ width: '105px' }} />
         </Grid>
